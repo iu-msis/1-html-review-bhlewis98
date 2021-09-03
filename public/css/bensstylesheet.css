@@ -1,0 +1,64 @@
+header {
+text-align: center;
+background-color: #574D68;
+  color: white;
+  }
+  
+  nav {
+  text-align: center;
+background-color: #A38560;
+  color: #574D68;
+  }
+  
+   h3 {
+    text-align: center;
+background-color: #EDEBEB;
+  color: #574D68;
+  }
+  
+  
+  footer {
+    text-align: center;
+	background-color: #574D68;
+  color: white;
+  }
+  
+  body {
+  font-family: 'Times New Roman', serif;
+}
+  
+   a {
+    
+  color: #574D68;
+  }
+  
+  ol {
+   text-align: center;
+  }
+  #Got information for linking thumbnails for the source below
+#https://www.w3schools.com/howto/howto_css_thumbnail.asp
+mg {
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 150px; /* Set a small width */
+}
+
+/* Add a hover effect (blue shadow) */
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+ img{
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+ border-radius: 50%;
+ }
