@@ -19,7 +19,7 @@
 
 <body>
 
-<table class="table table-hover">
+<table id="taskTable" class="table table-hover">
   <thead>
     <tr>
       <th scope="col">Title</th>
@@ -108,8 +108,11 @@
   <button class="btn btn-primary" type="submit">Add to table</button>
 </form>
 
-
-
+<!-- !tablesort plugine from http://tristen.ca/tablesort/demo/! -->
+<script src='js/tablesort.min.js'></script>
+<script>
+  new Tablesort(document.getElementById('taskTable'));
+</script>
 </body>
     
     <footer>
