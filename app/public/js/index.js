@@ -1,7 +1,7 @@
 const ppl = {
     data() {
       return {
-        "person": {},
+        "person": undefined
       
         }
     },

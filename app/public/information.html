@@ -30,31 +30,34 @@
       </nav>
 </header>
 <div id ="pplApp">
+  <div v-if="person">
   <form v-on:submit.prevent="fetchUserData">
-    <button type="submit">Generate New User</button>
+    <button  type="submit">Generate New User</button>
   </form>
-  <a  v-bind:href="person.picture.large">
-    <img v-bind:src="person.picture.large" alt="User Profile Image" class="image-thumbnail"></a>
-  
-  <h3>Name</h3>
-  <p>{{person.name.first}} {{person.name.last}}</p>
-  <h3>Country of Origin</h3>
-  <p>{{ person.location.country }}</p>
-  <h3>Birthdate</h3>
-  
-  <p>{{ prettyBirthday }}</p>
- 
-  <h3>Email</h3>
 
-  <p><a v-bind:href="'mailto:'+person.email">{{person.email}}</a></p>
-</div>
+  
+      <a  v-bind:href="person.picture.large">
+        <img v-bind:src="person.picture.large" alt="User Profile Image" class="image-thumbnail" style="height: 300px; width: auto;"></a>
+      
+      <h3>Name</h3>
+      <p>{{person.name.first}} {{person.name.last}}</p>
+      <h3>Country of Origin</h3>
+      <p>{{ person.location.country }}</p>
+      <h3>Birthdate</h3>
+      
+      <p>{{ prettyBirthday }}</p>
     
-    <footer>
-    <hr>
- 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id. Maecenas accumsan lacus vel facilisis volutpat est velit egestas. Id nibh tortor id aliquet lectus. Integer vitae justo eget magna fermentum iaculis eu non diam.
-</p>
-    </footer>
+      <h3>Email</h3>
+
+      <p><a v-bind:href="'mailto:'+person.email">{{person.email}}</a></p>
+    </div>
+  </div>
+        <footer>
+        <hr>
+    
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id. Maecenas accumsan lacus vel facilisis volutpat est velit egestas. Id nibh tortor id aliquet lectus. Integer vitae justo eget magna fermentum iaculis eu non diam.
+    </p>
+        </footer>
 <script src="js/index.js"></script>
 <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 </body>
