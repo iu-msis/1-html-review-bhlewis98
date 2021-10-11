@@ -4,10 +4,6 @@ class DbConnection
 {
   protected static $connection;
 
-  // function __create() {
-  //
-  // }
-
     static function getConnection() {
       if (self::$connection) {
         return self::$connection;
@@ -32,3 +28,8 @@ class DbConnection
       return self::$connection;
     }
 }
+// if ($connection->connect_error) {
+//   die("Connection failed: " . $connection->connect_error);
+// }
+//  echo "Connected successfully";
+?>

@@ -3,7 +3,7 @@
  <title>HomeWork D&S</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link href="css/bensstylesheet.css" rel="stylesheet" >
-
+  
 
 </head>
 
@@ -32,100 +32,37 @@
 
 <body>
 
-<table id="taskTable" class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Author(s)</th>
-      <th scope="col">Year Published</th>
-      <th scope="col">Publisher</th>
-      <th scope="col">Page Count</th>
-      <th scope="col">MSRP</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Hunger Games</th>
-      <td>Suzanne Collins</td>
-      <td>2008</td>
-      <td>Scholastic</td>
-      <td>374</td>
-      <td>$25</td>
-
-    </tr>
-    <tr>
-      <th scope="row">Fallen Angels</th>
-      <td>Walter Myers</td>
-      <td>1998</td>
-
-      <td>Scholastic</td>
-      <td>323</td>
-      <td>$20</td>
-
-    </tr>
-    <tr>
-      <th scope="row">Rich Dad Poor Dad</th>
-      <td>Robert Kiyosaki</td>
-      <td>2000</td>
-      <td>Warner</td>
-      <td>336</td>
-      <td>$18</td>
-
-    </tr>
+    <div id="booksApp" class="container">
+    <table id="taskTable" class="table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Year Published</th>
+          <th>Publisher</th>
+          <th>Page Count</th>
+          <th>MSRP</th>
+        </tr>
+      </thead>
+        <tbody>
+            <tr v-for="books in books">
+                <td>{{ books.Title }}</td>
+                <td>{{ books.Author }}</td>
+                <td>{{ books.Pub_Year }}</td>
+                <td>{{ books.Publisher }}</td>
+                <td>{{ books.Page_num }}</td>
+                <td>{{ books.MSRP }}</td>
+            </tr>
+        </tbody>
+    </table>
     
-    <tr>
-      <th scope="row">Bomber Mafia</th>
-      <td>Malcom Gladwell</td>
-      <td>2021</td>
-      <td>Little, Brown & C0</td>
-      <td>256</td>
-      <td>$28</td>
-
-    </tr>
-  </tbody>
-</table>
-<h4>Add to the table above</h4>
-<form>
-  <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label for="validationDefault01">Title</label>
-      <input type="text" class="form-control" id="validationDefault01"  required>
-    </div>
-    <div class="col-md-6 mb-3">
-      <label for="validationDefault02">Author(s)</label>
-      <input type="text" class="form-control" id="validationDefault02"  required>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label for="validationDefault03">Year Published</label>
-      <input type="text" class="form-control" id="validationDefault03" required>
-    </div>
-    <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label for="validationDefault03">Publisher</label>
-      <input type="text" class="form-control" id="validationDefault03" required>
-    </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationDefault05">Page Count</label>
-      <input type="text" class="form-control" id="validationDefault05" required>
-    </div>
-  </div>
-   <div class="col-md-3 mb-3">
-      <label for="validationDefault05">MSRP</label>
-      <input type="text" class="form-control" id="validationDefault05" required>
-    </div>
   </div>
 
-  </div>
-  <button class="btn btn-primary" type="submit">Add to table</button>
-</form>
+  <script src="js/books.js"></script>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 
-<!-- !tablesort plugine from http://tristen.ca/tablesort/demo/! -->
-<script src='js/tablesort.min.js'></script>
-<script>
-  new Tablesort(document.getElementById('taskTable'));
-</script>
+
 </body>
     
     <footer>
